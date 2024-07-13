@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+    background-color: #ffffff; /* This should match your logo's color */
+}
+
+img {
+    display: none;
+    opacity: 0;
+}
+#canvas-reference{
+    visibility: hidden;
+    display: none;
+}
+#canvas-interactive{
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper{
+    position: relative;
+}
+.itemsWrapper{
+    float: left;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+.itemsWrapper .items{
+    display: inline-block;
+    margin: 20px;
+    pointer-events: auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.canvasWrapper{
+    margin: auto;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+.canvasWrapper canvas {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
